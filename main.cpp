@@ -1,21 +1,10 @@
-// main.cpp : ���� ���� �������� ������� "main". ����� ���������� � ������������� ���������� ���������.
-//
-/*!
-    \mainpage
-    \brief Гороскоп
-    \author Полина Максимовна
-    \date 07.05.2019
-*/
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <Windows.h>
 
 using namespace std;
-/**
-@brief Разбиение даты на число, месяц, год
-\struct Signs
-*/
+
 struct Signs
 {
     int bday[3]; // ���� �������� ��.��.��
@@ -34,73 +23,10 @@ string answers[12] = { "������ �������, ��� ��
                        "�� ����������� �� ������� ������ �������, �� �� ����, �� �� ���-���� ���.", "������� ��� ������� ������������������ ���� ������������ �����."
                      };
 
-/**
-@brief Распределение знаков зодиака
-\class Answers
-*/
+
 class Answers
 {
 public:
-/** @brief Функция getAnswer получает название гороскопа в зависимости от даты рождения
- *
- *  @param signZodiac Публичная функция, присваивает знак зодиака
- *  @param year[8]  Массив типа Signs
- */
-/*!
-\code
- void getAnswer(string signZodiac, Signs year[8])
-    {
-        if ((signZodiac == sign_zodiac[0]) || ((year[0].bday[1] == 3 && year[0].bday[0] >= 21) || (year[0].bday[1] == 4 && year[0].bday[0] <= 19)))
-        {
-            cout << sign_zodiac[0] << "\n" << answers[0];
-        }
-        else if ((signZodiac == sign_zodiac[1]) || ((year[0].bday[1] == 4 && year[0].bday[0] >= 20) || (year[0].bday[1] == 5 && year[0].bday[0] <= 20)))
-        {
-            cout << sign_zodiac[1] << "\n" << answers[1];
-        }
-        else if ((signZodiac == sign_zodiac[2]) || ((year[0].bday[1] == 5 && year[0].bday[0] >= 21) || (year[0].bday[1] == 6 && year[0].bday[0] <= 21)))
-        {
-            cout << sign_zodiac[2] << "\n" << answers[2];
-        }
-        else if ((signZodiac == sign_zodiac[3]) || ((year[0].bday[1] == 6 && year[0].bday[0] >= 22) || (year[0].bday[1] == 7 && year[0].bday[0] <= 22)))
-        {
-            cout << sign_zodiac[3] << "\n" << answers[3];
-        }
-        else if ((signZodiac == sign_zodiac[4]) || ((year[0].bday[1] == 7 && year[0].bday[0] >= 23) || (year[0].bday[1] == 8 && year[0].bday[0] <= 22)))
-        {
-            cout << sign_zodiac[4] << "\n" << answers[4];
-        }
-        else if ((signZodiac == sign_zodiac[5]) || ((year[0].bday[1] == 8 && year[0].bday[0] >= 23) || (year[0].bday[1] == 9 && year[0].bday[0] <= 22)))
-        {
-            cout << sign_zodiac[5] << "\n" << answers[5];
-        }
-        else if ((signZodiac == sign_zodiac[6]) || ((year[0].bday[1] == 9 && year[0].bday[0] >= 23) || (year[0].bday[1] == 10 && year[0].bday[0] <= 23)))
-        {
-            cout << sign_zodiac[6] << "\n" << answers[6];
-        }
-        else if ((signZodiac == sign_zodiac[7]) || ((year[0].bday[1] == 10 && year[0].bday[0] >= 24) || (year[0].bday[1] == 11 && year[0].bday[0] <= 22)))
-        {
-            cout << sign_zodiac[7] << "\n" << answers[7];
-        }
-        else if ((signZodiac == sign_zodiac[8]) || ((year[0].bday[1] == 11 && year[0].bday[0] >= 23) || (year[0].bday[1] == 12 && year[0].bday[0] <= 21)))
-        {
-            cout << sign_zodiac[8] << "\n" << answers[8];
-        }
-        else if ((signZodiac == sign_zodiac[9]) || ((year[0].bday[1] == 12 && year[0].bday[0] >= 22) || (year[0].bday[1] == 1 && year[0].bday[0] <= 20)))
-        {
-            cout << sign_zodiac[9] << "\n" << answers[9];
-        }
-        else if ((signZodiac == sign_zodiac[10]) || ((year[0].bday[1] == 1 && year[0].bday[0] >= 21) || (year[0].bday[1] == 2 && year[0].bday[0] <= 18)))
-        {
-            cout << sign_zodiac[10] << "\n" << answers[10];
-        }
-        else if ((signZodiac == sign_zodiac[11]) || ((year[0].bday[1] == 2 && year[0].bday[0] >= 19) || (year[0].bday[1] == 3 && year[0].bday[0] <= 20)))
-        {
-            cout << sign_zodiac[11] << "\n" << answers[11];
-        }
-    }
-\endcode
-*/
     void getAnswer(string signZodiac, Signs year[8])
     {
         if ((signZodiac == sign_zodiac[0]) || ((year[0].bday[1] == 3 && year[0].bday[0] >= 21) || (year[0].bday[1] == 4 && year[0].bday[0] <= 19)))
