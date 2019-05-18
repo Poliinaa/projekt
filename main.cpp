@@ -1,6 +1,3 @@
-// forPolina.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #include "pch.h"
 #include <iostream>
 #include <iomanip>
@@ -83,6 +80,7 @@ public:
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
